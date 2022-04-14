@@ -33,7 +33,7 @@ class Article(models.Model):
     available = models.BooleanField(default=True)
     photo = models.ImageField(null=True, blank=True, upload_to = 'newsPhoto/%Y/%m/%d')
     category = models.ForeignKey(Category, null=True, on_delete=models.DO_NOTHING)
-    tags = models.ManyToManyField(Tag, blank=True, null=True)
+    tags = models.ManyToManyField(Tag, blank=True)
 
     def save(self, *args, **kwargs):
         super().save()

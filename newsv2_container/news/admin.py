@@ -4,8 +4,12 @@ from . models import Article,Journalist,Tag, Category
 
 @admin.register(Article)
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'content', 'available')
+    list_display = ('title','journalist', 'category', 'available')
     search_fields = ('title', 'content')
+
+    # def get_content(self, obj):
+    #     return obj.content[:50]
+    # get_content.short_description = "content"
 
 @admin.register(Journalist)
 class CategoryAdmin(admin.ModelAdmin):
