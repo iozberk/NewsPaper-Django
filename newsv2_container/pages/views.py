@@ -9,4 +9,4 @@ class IndexView(TemplateView):
 
 
 class NewsView(TemplateView):
-    template_name = 'news.html'
+    template_name = 'article.html'
